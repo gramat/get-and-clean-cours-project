@@ -34,35 +34,20 @@ and make possible to test are there these files at all
 or just in work directory)
 
     getDataPath <- function(dataDir, dataSubDir, dataFile){
-
       if(file.exists(file.path(dataDir,dataSubDir, dataFile))){
-  
         return(file.path(dataDir,dataSubDir, dataFile))
-    
       }else{
-  
         if(file.exists(file.path(dataSubDir, dataFile))){
-    
           return(file.path(dataSubDir, dataFile))
-      
         }else{
-    
           if(file.exists(file.path(dataFile))){
-      
             return(file.path(dataFile))
-        
           }
-      
           else{
-      
             return(NA)
-        
           }
-      
         }
-    
       }
-  
     }
 
 
@@ -70,42 +55,25 @@ define the folder names and data files variables
 
 
         dataDir <- file.path("UCI HAR Dataset")
-
         trainDir <- file.path("train")
-
         testDir <- file.path("test")
-
-        dataFiles <- c("X_train.txt", "subject_train.txt", "y_train.txt", "X_test.txt", "subject_test.txt", "y_test.txt", 
-
-                       "activity_labels.txt", "features.txt")
-               
+        dataFiles <- c("X_train.txt", "subject_train.txt", "y_train.txt", "X_test.txt", "subject_test.txt", "y_test.txt",                        "activity_labels.txt", "features.txt")
         dataPaths <- vector(mode="character", length=8)
-
 
 test if files exist and if they do - get path to files
 
         for(i in c(1:3)){
-
             dataPaths[i] <- getDataPath(dataDir, trainDir, dataFiles[i])
-  
         }
-
         for(i in c(4:6)){
-
             dataPaths[i] <- getDataPath(dataDir, testDir, dataFiles[i])
-  
         }
-
         for(i in c(7:8)){
-
             dataPaths[i] <- getDataPath("", dataDir, dataFiles[i])
-  
         }
 
 
 if some files do not exist - stop script
-
-/////////////////////////////////////////////////////////////
 
 if(sum(is.na(dataPaths)) > 0){
 
