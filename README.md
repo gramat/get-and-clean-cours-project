@@ -1,25 +1,39 @@
 ####The repo get-and-clean-cours-project contains
 Coursera.org
+
 Data Science Specialization
-Getting & Cleaning Data Course Project
+
+Getting & Cleaning Data course croject files
+
 D.Gramatchikov
-run_analysis.R
+
+######Script run_analysis.R
 ######NEEDS:
 The training and test data sets and descripting files extracted from 
+
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.
+
 Folder UCI HAR Dataset must be in the current work directory.
+
+
 ######DOES:
 * Merges the training and the test sets to create one data set.
 * Extracts only the measurements on the mean and standard deviation for each measurement. 
 * Uses descriptive activity names to name the activities in the data set
 * Appropriately labels the data set with descriptive activity names. 
 * Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
-######
-######Preparatory steps:
-######The function getting pathnames for necessary data files
-######and make possible to test are there these files at all
-######(in UCI HAR Dataset folder, or in train folder
-######or just in work directory)
+
+**Preporatory steps are:**
+
+The function getting pathnames for necessary data files
+
+and make possible to test are there these files at all
+
+(in UCI HAR Dataset folder or in train folder
+
+or just in work directory)
+
+
 getDataPath <- function(dataDir, dataSubDir, dataFile){
   if(file.exists(file.path(dataDir,dataSubDir, dataFile))){
     return(file.path(dataDir,dataSubDir, dataFile))
