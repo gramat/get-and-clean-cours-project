@@ -25,7 +25,7 @@ Folder UCI HAR Dataset must be in the current work directory.
 
 **Preporatory steps are:**
 
-The function getting pathnames for necessary data files
+Write the function getting pathnames for necessary data files
 
 and make possible to test are there these files at all
 
@@ -73,17 +73,17 @@ define the folder names and data files variables
 
 ///////////////////////////////////////////////////////////
 
-dataDir <- file.path("UCI HAR Dataset")
+        dataDir <- file.path("UCI HAR Dataset")
 
-trainDir <- file.path("train")
+        trainDir <- file.path("train")
 
-testDir <- file.path("test")
+        testDir <- file.path("test")
 
-dataFiles <- c("X_train.txt", "subject_train.txt", "y_train.txt", "X_test.txt", "subject_test.txt", "y_test.txt", 
+        dataFiles <- c("X_train.txt", "subject_train.txt", "y_train.txt", "X_test.txt", "subject_test.txt", "y_test.txt", 
 
-               "activity_labels.txt", "features.txt")
+                       "activity_labels.txt", "features.txt")
                
-dataPaths <- vector(mode="character", length=8)
+        dataPaths <- vector(mode="character", length=8)
 
 ///////////////////////////////////////////////////////////
 
