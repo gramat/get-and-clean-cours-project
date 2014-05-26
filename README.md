@@ -25,9 +25,9 @@ Folder UCI HAR Dataset must be in the current work directory.
 
 **Preporatory steps are:**
 
-Write the function getting pathnames for necessary data files
+**Write the function getting pathnames for necessary data files**
 
-and make possible to test are there these files at all
+*and make possible to test are there these files at all*
 
 (in UCI HAR Dataset folder or in train folder
 
@@ -51,7 +51,7 @@ or just in work directory)
     }
 
 
-define the folder names and data files variables
+**define the folder names and data files variables**
 
 
         dataDir <- file.path("UCI HAR Dataset")
@@ -60,7 +60,7 @@ define the folder names and data files variables
         dataFiles <- c("X_train.txt", "subject_train.txt", "y_train.txt", "X_test.txt", "subject_test.txt", "y_test.txt", "activity_labels.txt", "features.txt")
         dataPaths <- vector(mode="character", length=8)
 
-test if files exist and if they do - get path to files
+**test if files exist and if they do - get path to files**
 
         for(i in c(1:3)){
             dataPaths[i] <- getDataPath(dataDir, trainDir, dataFiles[i])
@@ -72,15 +72,14 @@ test if files exist and if they do - get path to files
             dataPaths[i] <- getDataPath("", dataDir, dataFiles[i])
         }
 
-
-if some files do not exist - stop script
+**if some files do not exist - stop script**
 
         if(sum(is.na(dataPaths)) > 0){
             stop("Sorry, files: ", dataFiles[is.na(dataPaths)], " - not found. Script is stopped.")
   
         }
 
-else, if all files are found
+**else, if all files are found**
 
 **getting train data**
 
@@ -159,6 +158,7 @@ column names as in samsungData and 180 rows (30 subjects * 6 activities)
         tidyData <- samsungData[1:180, ]
         
 **assign the cells the average of each variable for each activity and each subject.**
+
         for(i in c(1:30)){
           for(j in c(1:6)){
             rowNum <- 6*(i-1)+j
