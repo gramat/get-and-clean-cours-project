@@ -35,37 +35,37 @@ or just in work directory)
 
 //////////////////////////////////////////////////////////
 
-getDataPath <- function(dataDir, dataSubDir, dataFile){
+  getDataPath <- function(dataDir, dataSubDir, dataFile){
 
-  if(file.exists(file.path(dataDir,dataSubDir, dataFile))){
+    if(file.exists(file.path(dataDir,dataSubDir, dataFile))){
   
-    return(file.path(dataDir,dataSubDir, dataFile))
+      return(file.path(dataDir,dataSubDir, dataFile))
     
-  }else{
-  
-    if(file.exists(file.path(dataSubDir, dataFile))){
-    
-      return(file.path(dataSubDir, dataFile))
-      
     }else{
-    
-      if(file.exists(file.path(dataFile))){
-      
-        return(file.path(dataFile))
-        
-      }
-      
-      else{
-      
-        return(NA)
-        
-      }
-      
-    }
-    
-  }
   
-}
+      if(file.exists(file.path(dataSubDir, dataFile))){
+    
+        return(file.path(dataSubDir, dataFile))
+      
+      }else{
+    
+        if(file.exists(file.path(dataFile))){
+      
+          return(file.path(dataFile))
+        
+        }
+      
+        else{
+      
+          return(NA)
+        
+        }
+      
+      }
+    
+    }
+  
+  }
 
 ///////////////////////////////////////////////////////////
 
