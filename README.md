@@ -33,8 +33,6 @@ and make possible to test are there these files at all
 
 or just in work directory)
 
-//////////////////////////////////////////////////////////
-
     getDataPath <- function(dataDir, dataSubDir, dataFile){
 
       if(file.exists(file.path(dataDir,dataSubDir, dataFile))){
@@ -67,11 +65,9 @@ or just in work directory)
   
     }
 
-///////////////////////////////////////////////////////////
 
 define the folder names and data files variables
 
-///////////////////////////////////////////////////////////
 
         dataDir <- file.path("UCI HAR Dataset")
 
@@ -85,29 +81,27 @@ define the folder names and data files variables
                
         dataPaths <- vector(mode="character", length=8)
 
-///////////////////////////////////////////////////////////
 
 test if files exist and if they do - get path to files
 
-for(i in c(1:3)){
+        for(i in c(1:3)){
 
-  dataPaths[i] <- getDataPath(dataDir, trainDir, dataFiles[i])
+            dataPaths[i] <- getDataPath(dataDir, trainDir, dataFiles[i])
   
-}
+        }
 
-for(i in c(4:6)){
+        for(i in c(4:6)){
 
-  dataPaths[i] <- getDataPath(dataDir, testDir, dataFiles[i])
+            dataPaths[i] <- getDataPath(dataDir, testDir, dataFiles[i])
   
-}
+        }
 
-for(i in c(7:8)){
+        for(i in c(7:8)){
 
-  dataPaths[i] <- getDataPath("", dataDir, dataFiles[i])
+            dataPaths[i] <- getDataPath("", dataDir, dataFiles[i])
   
-}
+        }
 
-/////////////////////////////////////////////////////////////
 
 if some files do not exist - stop script
 
