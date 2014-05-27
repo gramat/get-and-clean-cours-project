@@ -44,15 +44,9 @@ These signals were used to estimate variables of the feature vector for each pat
 
 ####Transformed Data Variables:
 
-* subject:
-      **index of persons observed
-    **integer
-    **rank 1-30
+* subject:     index of persons observed, integer, rank 1-30
 
-* activity: 
-    visual fixed activities of persons
-    factor
-    levels: "WALKING", "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", "STANDING", LAYING" 
+* activity:    visual fixed activities of persons, factor, levels: "WALKING", "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", "STANDING", LAYING" 
 
 All another variables were selected as the ons involving the means and standard deviations of mesurements of initial data set
 all variables are numeric, rank: -1 - 1
