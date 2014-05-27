@@ -90,7 +90,7 @@ or just in work directory)
 
 **train data set is ready;**
 
-remove subjectTrain, yTrain, xTrain (just for memory saving)
+        remove subjectTrain, yTrain, xTrain (just for memory saving)
 
         rm(subjectTrain, yTrain, xTrain)
 
@@ -104,7 +104,7 @@ remove subjectTrain, yTrain, xTrain (just for memory saving)
         
 **test data set is ready;**
 
-remove subjectTest, yTest, xTest
+        remove subjectTest, yTest, xTest
 
         rm(subjectTest, yTest, xTest)
 
