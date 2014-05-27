@@ -12,7 +12,7 @@ Human Activity Recognition Using Smartphones Dataset
 
 Version 1.0
 
-
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
 Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
 
@@ -22,9 +22,11 @@ DITEN - Università degli Studi di Genova.
 
 Via Opera Pia 11A, I-16145, Genoa, Italy.
 
-activityrecognition@smartlab.ws
-
 www.smartlab.ws
+
+**Data source:**
+
+*https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip *
 
 The features selected for original database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
@@ -34,6 +36,8 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+
 
 ####Transformations:
 * Merged the training and the test sets to create one data set.
@@ -49,7 +53,9 @@ These signals were used to estimate variables of the feature vector for each pat
 
 All **other variables** were selected as the ones involving the means and standard deviations 
 of the same mesurements in original data set.
-all variables are the average of each original variable for each activity and each subject
+
+Variables are the average of each original variable for each activity and each subject
+
 numeric, rank: -1 - 1
 
 * **tBodyAcc.mean.X**
