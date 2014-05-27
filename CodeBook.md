@@ -1,19 +1,32 @@
 ##Codebook for tidy_data.txt
 Coursera.org
+
 Data Science Specialization
+
 Getting & Cleaning Data Course Project
 
-Data created by run_analysis.R from Human Activity Recognition Using Smartphones Dataset
+**Data created by run_analysis.R**
+
+#### Original Data:
+Human Activity Recognition Using Smartphones Dataset
+
 Version 1.0
+
+
+
 Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
+
 Smartlab - Non Linear Complex Systems Laboratory
+
 DITEN - Università degli Studi di Genova.
+
 Via Opera Pia 11A, I-16145, Genoa, Italy.
+
 activityrecognition@smartlab.ws
+
 www.smartlab.ws
 
-####Data:
-The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+The features selected for original database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
 Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
 
@@ -29,10 +42,17 @@ These signals were used to estimate variables of the feature vector for each pat
 * Labeled the data set with descriptive names 
 * Meanings of the variables = the average of each variable for each activity and each subject. 
 
-####Variables:
+####Transformed Data Variables:
 
-* subject: integer, rank 1-30, - index of persons observed
-* activity: factor, levels: "WALKING", "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", "STANDING", LAYING", - visual fixed activities of persons
+* subject:
+    index of persons observed
+    integer
+    rank 1-30
+
+* activity: 
+    visual fixed activities of persons
+    factor
+    levels: "WALKING", "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", "STANDING", LAYING" 
 
 All another variables were selected as the ons involving the means and standard deviations of mesurements of initial data set
 all variables are numeric, rank: -1 - 1
