@@ -45,9 +45,9 @@ These signals were used to estimate variables of the feature vector for each pat
 ####Transformed Data Variables:
 
 * subject:
-    index of persons observed
-    integer
-    rank 1-30
+    **index of persons observed
+    **integer
+    **rank 1-30
 
 * activity: 
     visual fixed activities of persons
